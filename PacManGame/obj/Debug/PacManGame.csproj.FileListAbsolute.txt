@@ -1,0 +1,7 @@
+C:\Users\ttotti\Documents\Visual Studio 2017\Projects\C#\PacManGame\PacManGame\bin\Debug\PacManGame.exe.config
+C:\Users\ttotti\Documents\Visual Studio 2017\Projects\C#\PacManGame\PacManGame\bin\Debug\PacManGame.exe
+C:\Users\ttotti\Documents\Visual Studio 2017\Projects\C#\PacManGame\PacManGame\bin\Debug\PacManGame.pdb
+C:\Users\ttotti\Documents\Visual Studio 2017\Projects\C#\PacManGame\PacManGame\obj\Debug\PacManGame.csprojAssemblyReference.cache
+C:\Users\ttotti\Documents\Visual Studio 2017\Projects\C#\PacManGame\PacManGame\obj\Debug\PacManGame.csproj.CoreCompileInputs.cache
+C:\Users\ttotti\Documents\Visual Studio 2017\Projects\C#\PacManGame\PacManGame\obj\Debug\PacManGame.exe
+C:\Users\ttotti\Documents\Visual Studio 2017\Projects\C#\PacManGame\PacManGame\obj\Debug\PacManGame.pdb
