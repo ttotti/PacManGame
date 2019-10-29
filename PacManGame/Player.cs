@@ -17,12 +17,14 @@ namespace PacManGame
         //player[6] = "▼";
         //player[7] = "▽";
         public string[] playerImage = new string[8] { "◀", "◁", "▶", "▷", "▲", "△", "▼", "▽" };
+        public int ImageNumber;
         public int direction;
         public int x;
         public int y;
 
         public Player()
         {
+            ImageNumber = 0;
             direction = 0;
             x = 0;
             y = 0;

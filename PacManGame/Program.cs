@@ -10,6 +10,7 @@ namespace PacManGame
     {
         static void Main(string[] args)
         {
+            
             Console.CursorVisible = false;
             Gameloop gameloop = new Gameloop();
 
