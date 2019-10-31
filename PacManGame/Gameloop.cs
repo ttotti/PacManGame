@@ -11,23 +11,25 @@ namespace PacManGame
         enum Direction { LEFT = 0, RIGHT, UP, DOWN }
 
         Player player = new Player();
+        Map map = new Map();
+        Draw draw = new Draw();
 
         public void Run()
         {
+            map.LoadMap("map.txt");
+
             while(true)
             {
-                Print(player.x, player.y, player.playerImage[player.ImageNumber]);
+                map.PrintMap();
+
+                draw.Print(player.x, player.y, player.playerImage[player.ImageNumber]);
                 MovePlayer();
 
-                System.Threading.Thread.Sleep(50);
+                draw.TextPrint(100, 10, player.x.ToString());
+                draw.TextPrint(100, 11, player.y.ToString());
+                System.Threading.Thread.Sleep(100);
                 Console.Clear();
             }
-        }
-
-        public void Print(int x, int y, string Image)
-        {
-            Console.SetCursorPosition(x * 2, y);
-            Console.Write(Image);
         }
 
         void MovePlayer()
@@ -62,7 +64,7 @@ namespace PacManGame
             switch(player.direction)
             {
                 case (int)Direction.LEFT:
-                    if (player.x > 0)
+                    if (map.map[player.y, player.x - 1] != '1')
                     {
                         player.x--;
 
@@ -74,16 +76,19 @@ namespace PacManGame
                     break;
 
                 case (int)Direction.RIGHT:
-                    player.x++;
+                    if (map.map[player.y, player.x + 1] != '1')
+                    {
+                        player.x++;
 
-                    if (player.ImageNumber != 2)
-                        player.ImageNumber = 2;
-                    else
-                        player.ImageNumber = 3;
+                        if (player.ImageNumber != 2)
+                            player.ImageNumber = 2;
+                        else
+                            player.ImageNumber = 3;
+                    }
                     break;
 
                 case (int)Direction.UP:
-                    if (player.y > 0)
+                    if (map.map[player.y - 1, player.x] != '1') 
                     {
                         player.y--;
 
@@ -95,12 +100,15 @@ namespace PacManGame
                     break;
 
                 case (int)Direction.DOWN:
-                    player.y++;
+                    if (map.map[player.y + 1, player.x] != '1')
+                    {
+                        player.y++;
 
-                    if (player.ImageNumber != 6)
-                        player.ImageNumber = 6;
-                    else
-                        player.ImageNumber = 7;
+                        if (player.ImageNumber != 6)
+                            player.ImageNumber = 6;
+                        else
+                            player.ImageNumber = 7;
+                    }
                     break;
             }
         }

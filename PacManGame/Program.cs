@@ -10,7 +10,7 @@ namespace PacManGame
     {
         static void Main(string[] args)
         {
-            
+            // 커서 없애기
             Console.CursorVisible = false;
             Gameloop gameloop = new Gameloop();
 
